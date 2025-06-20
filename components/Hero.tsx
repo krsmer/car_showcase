@@ -6,16 +6,16 @@ import { CustomButton } from "@components";
 
 const Hero = () => {
   const handleScroll = () => {
-    const nextSection = document.getElementById("discover");
+    const nextSection = document.getElementById("discover"); 
 
-    if (nextSection) {
+    if (nextSection) {             
       nextSection.scrollIntoView({ behavior: "smooth" });
-    }
+    }                               
   };
 
   return (
-    <div className="hero">
-      <div className="flex-1 pt-36 padding-x">
+    <div className="flex-1 pt-36 padding-x">
+        <div className="hero">
         <h1 className="hero__title">
           Find, book, rent a car—quick and super easy!
         </h1>
