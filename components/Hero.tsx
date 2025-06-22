@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-
+import { motion } from "motion/react";
 import { CustomButton } from "@components";
 
 const Hero = () => {
@@ -25,11 +25,19 @@ const Hero = () => {
           process.
         </p>
 
-        <CustomButton
-          title="Explore Cars"
-          containerStyles="bg-primary-blue text-white rounded-full mt-10"
-          handleClick={handleScroll}
-        />
+      <motion.div
+          initial={{ x: -200, opacity: 0 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95, rotate: "2.5deg" }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <CustomButton
+            title="Explore Cars"
+            containerStyles="bg-primary-blue text-white max-w-[200px] sm:w-[100px] rounded-full mt-10 hover:scale-105 duration-300"
+            handleClick={handleScroll}
+          />
+      </motion.div>
       </div>
       <div className="hero__image-container">
         <div className="hero__image">

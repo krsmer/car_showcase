@@ -17,7 +17,7 @@ const CustomButton = ({ isDisabled, btnType, containerStyles, textStyles, title,
         <Image
           src={rightIcon}
           alt="arrow_left"
-          fill
+          
           className="object-contain"
         />
       </div>
